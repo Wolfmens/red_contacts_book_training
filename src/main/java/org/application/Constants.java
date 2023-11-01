@@ -1,5 +1,8 @@
 package org.application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public interface Constants {
 
     String ADD = "A";
@@ -7,6 +10,9 @@ public interface Constants {
     String SAVE = "S";
     String EXIT = "E";
     String LIST = "L";
+
+    List<String> COMMANDS = List.of(ADD,REMOVE,SAVE,EXIT,LIST);
+    String INCORRECT_COMMAND = "Выбрана неизвестная команда, проверьте правильность ввода";
 
     String GREETINGS = "Добро пожаловать в \"Красную контактную книгу\"";
 

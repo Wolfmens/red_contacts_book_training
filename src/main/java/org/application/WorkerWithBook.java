@@ -26,6 +26,10 @@ public class WorkerWithBook {
             if (command.equals(Constants.EXIT)) {
                 break;
             }
+            if (!Constants.COMMANDS.contains(command)) {
+                System.out.println(Constants.INCORRECT_COMMAND);
+                continue;
+            }
             switch (command) {
                 case Constants.ADD -> addUserToList();
                 case Constants.LIST -> showAddedContacts();
