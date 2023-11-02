@@ -2,6 +2,7 @@ package org.application;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PreDestroy;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -77,5 +78,10 @@ public class WorkerWithBook {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("Приложение закрывается ...");
     }
 }
